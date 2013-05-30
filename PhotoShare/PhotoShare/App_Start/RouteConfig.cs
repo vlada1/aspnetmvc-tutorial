@@ -13,6 +13,12 @@ namespace PhotoShare
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // photos/search/vacation
+
+            routes.MapRoute("SearchByTag",
+                "photos/search/{tag}",
+                new { controller = "Search", action = "ByTag", tag = UrlParameter.Optional });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
