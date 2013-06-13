@@ -13,7 +13,7 @@ namespace PhotoShare.Controllers
 
         public ActionResult ByTag(string tag)
         {
-            return Content("You searched by " + tag);
+            return RedirectToAction("Index", "Home", new { tag = tag });
         }
 
     }

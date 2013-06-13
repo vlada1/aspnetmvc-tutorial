@@ -19,6 +19,7 @@ namespace PhotoShare
                 "photos/search/{tag}",
                 new { controller = "Search", action = "ByTag", tag = UrlParameter.Optional });
 
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
