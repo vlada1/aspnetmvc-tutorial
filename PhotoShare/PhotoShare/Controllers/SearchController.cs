@@ -13,7 +13,7 @@ namespace PhotoShare.Controllers
 
         public ActionResult ByTag(string tag)
         {
-            return RedirectToRoute("Default", new { controller = "Home", action = "About" });
+            return File(Server.MapPath("~/sample_file.pdf"), "application/pdf");
         }
 
     }
