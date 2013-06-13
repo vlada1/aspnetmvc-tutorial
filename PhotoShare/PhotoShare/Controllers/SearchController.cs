@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace PhotoShare.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class SearchController : Controller
     {
         //
@@ -14,6 +14,7 @@ namespace PhotoShare.Controllers
 
         public ActionResult ByTag(string tag)
         {
+            throw new Exception("Something terrible has happened");
             return Content("You searched for " + tag);
         }
 
