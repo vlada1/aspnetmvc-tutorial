@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace PhotoShare.Controllers
 {
+    [Authorize]
     public class SearchController : Controller
     {
         //
         // GET: /Search/
 
-        [Authorize]
         public ActionResult ByTag(string tag)
         {
             return Content("You searched for " + tag);
