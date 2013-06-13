@@ -11,16 +11,10 @@ namespace PhotoShare.Controllers
         //
         // GET: /Search/
 
-        [HttpGet]
+        [Authorize]
         public ActionResult ByTag(string tag)
         {
             return Content("You searched for " + tag);
-        }
-
-        [HttpPost]
-        public ActionResult ByTag()
-        {
-            return Content("Hello!");
         }
 
     }
