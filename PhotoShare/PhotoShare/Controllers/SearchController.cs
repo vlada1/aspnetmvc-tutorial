@@ -13,7 +13,7 @@ namespace PhotoShare.Controllers
 
         public ActionResult ByTag(string tag)
         {
-            return File(Server.MapPath("~/sample_file.pdf"), "application/pdf");
+            return Json(new { name = "nirav", age = 21, school = "GT" }, JsonRequestBehavior.AllowGet);
         }
 
     }
