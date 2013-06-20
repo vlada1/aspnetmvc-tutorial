@@ -2,13 +2,13 @@
 
 @{
     ViewBag.Title = "Index";
+}
 
-    Layout = null;
+@section featured{
+    <h2>Latest Photos (@Model.Count())</h2>
 }
 
 <div class="latest-photos-list">
-
-    <h2>Latest Photos (@Model.Count())</h2>
 
     <p>
         @Html.ActionLink("Create New", "Create")
