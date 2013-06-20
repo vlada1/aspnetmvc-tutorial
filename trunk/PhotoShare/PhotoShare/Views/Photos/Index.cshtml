@@ -4,45 +4,25 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Latest Photos (@Model.Count())</h2>
-@VirtualPath
+<div class="latest-photos-list">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FilePath)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th>
-        </th>
-    </tr>
+    <h2>Latest Photos (@Model.Count())</h2>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @* Html.DisplayFor(modelItem => item.Description) *@
-            @Html.Raw(item.Description)
-        <td>
-            @Html.DisplayFor(modelItem => item.FilePath)
-        </td>
-        <td>
-            R@(item.Rating)
-            @@PhotoShare
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
 
-</table>
+    <br />
+
+    @foreach (var photo in Model)
+    {
+        @:Photo
+        <div>
+            <img src="@Url.Content(photo.FilePath)" width="500" height="300" />
+            <br />
+            <p>@photo.Description</p>
+            <p>@photo.Rating / 10</p>
+        </div>
+    }
+
+</div>

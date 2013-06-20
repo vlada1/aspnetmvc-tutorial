@@ -119,7 +119,7 @@ namespace PhotoShare.Controllers
             {
                 ID = 2,
                 Description = "These are some beautiful mountains",
-                FilePath = "~/PhotoUploads/mountains.png",
+                FilePath = "~/PhotoUploads/mountains.jpg",
                 Rating = 9
             },
         };
