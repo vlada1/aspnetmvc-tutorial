@@ -110,15 +110,17 @@ namespace PhotoShare.Controllers
             new Photo
             {
                 ID = 1,
-                Description = "Check out this <script>alert('xss');</script> shot of sunset!",
-                FilePath = "~/PhotoUploads/sunset.jpg"
+                Description = "Check out this shot of sunset!",
+                FilePath = "~/PhotoUploads/sunset.jpg",
+                Rating = 6
             },
 
             new Photo
             {
                 ID = 2,
                 Description = "These are some beautiful mountains",
-                FilePath = "~/PhotoUploads/mountains.png"
+                FilePath = "~/PhotoUploads/mountains.png",
+                Rating = 9
             },
         };
     }
