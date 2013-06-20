@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PhotoShare.Models.Photo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Latest Photos (@Model.Count())</h2>
+@VirtualPath
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @* Html.DisplayFor(modelItem => item.Description) *@
+            @Html.Raw(item.Description)
+        <td>
+            @Html.DisplayFor(modelItem => item.FilePath)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
