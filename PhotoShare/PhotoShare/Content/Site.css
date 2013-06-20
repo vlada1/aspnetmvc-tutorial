@@ -754,3 +754,9 @@ tr.pager td {
             margin: 0;
         }
 }
+
+/* PhotoShare custom styles */
+
+.latest-photos-list {
+    text-align:center;
+}
