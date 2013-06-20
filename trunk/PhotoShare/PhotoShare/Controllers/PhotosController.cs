@@ -58,7 +58,8 @@ namespace PhotoShare.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            var photo = _photos.Single(p => p.ID == id);
+            return View(photo);
         }
 
         //
@@ -67,16 +68,12 @@ namespace PhotoShare.Controllers
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
+            var photo = _photos.Single(p => p.ID == id);
+            if (TryUpdateModel(photo))
             {
-                // TODO: Add update logic here
-
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(photo);
         }
 
         //

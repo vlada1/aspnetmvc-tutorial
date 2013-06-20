@@ -4,12 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-@section featured{
-    <h2>Latest Photos (@Model.Count())</h2>
-}
 
 <div class="latest-photos-list">
-
+    <h2>Latest Photos (@Model.Count())</h2>
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
@@ -24,6 +21,7 @@
             <br />
             <p>@photo.Description</p>
             <p>@photo.Rating / 10</p>
+            <p>@Html.ActionLink("Edit", "Edit", new { id = @photo.ID })</p>
         </div>
     }
 
