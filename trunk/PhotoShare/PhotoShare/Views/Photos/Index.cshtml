@@ -18,7 +18,11 @@
         <th>
             @Html.DisplayNameFor(model => model.FilePath)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -28,6 +32,10 @@
             @Html.Raw(item.Description)
         <td>
             @Html.DisplayFor(modelItem => item.FilePath)
+        </td>
+        <td>
+            R@(item.Rating)
+            @@PhotoShare
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
