@@ -16,7 +16,7 @@ namespace PhotoShare
             // photos/search/vacation
 
             routes.MapRoute("SearchByTag",
-                "photos/search/{tag}",
+                "search/{tag}",
                 new { controller = "Search", action = "ByTag", tag = UrlParameter.Optional });
 
 
