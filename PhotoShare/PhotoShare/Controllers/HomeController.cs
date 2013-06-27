@@ -14,7 +14,15 @@ namespace PhotoShare.Controllers
 
         public ActionResult Index()
         {
-            var model = pdb.Albums.ToList();
+            // Comprehension Query Syntax
+            var model = from album in pdb.Albums
+                        orderby album.Photos.Count() descending
+                        select new AlbumsListViewModel
+                        {
+                            Name = album.Name,
+                            Description = album.Description,
+                            PhotosCount = album.Photos.Count()
+                        };
             return View(model);
         }
 

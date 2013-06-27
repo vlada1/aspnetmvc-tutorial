@@ -182,6 +182,7 @@
     <Compile Include="Models\AboutModel.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\AlbumsListViewModel.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\PhotoShareDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -25,20 +25,34 @@ namespace PhotoShare.Migrations
                     Description = "An album containing photos of sceneries",
                     Photos = new List<Photo>
                     {
-                                    new Photo
-            {
-                Description = "Check out this shot of sunset!",
-                FilePath = "~/PhotoUploads/sunset.jpg",
-                Rating = 6
-            },
+                        new Photo
+                        {
+                            Description = "Check out this shot of sunset!",
+                            FilePath = "~/PhotoUploads/sunset.jpg",
+                            Rating = 6
+                        },
 
-            new Photo
-            {
-                Description = "These are some beautiful mountains",
-                FilePath = "~/PhotoUploads/mountains.jpg",
-                Rating = 9
-            },
+                        new Photo
+                        {
+                            Description = "These are some beautiful mountains",
+                            FilePath = "~/PhotoUploads/mountains.jpg",
+                            Rating = 9
+                        },
 
+                    }
+                },
+                new Album
+                {
+                    Name = "Cookies!",
+                    Description = "My favorite cookies in the world",
+                    Photos = new List<Photo>
+                    {
+                        new Photo 
+                        {
+                            Description = "The classic oreo!",
+                            FilePath = "~/PhotoUploads/oreo.jpg",
+                            Rating = 8
+                        }
                     }
                 }
 

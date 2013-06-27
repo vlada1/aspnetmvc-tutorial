@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PhotoShare.Models.Album>
+﻿@model IEnumerable<PhotoShare.Models.AlbumsListViewModel>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -8,5 +8,6 @@
     <div>
         <h2>@item.Name</h2>
         <p>@item.Description</p>
+        <p>Photos: @item.PhotosCount</p>
     </div>
 }
