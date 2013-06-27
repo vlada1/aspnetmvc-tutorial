@@ -12,17 +12,29 @@ namespace PhotoShare.Controllers
 
         PhotoShareDb pdb = new PhotoShareDb();
 
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
             // Comprehension Query Syntax
-            var model = from album in pdb.Albums
-                        orderby album.Photos.Count() descending
-                        select new AlbumsListViewModel
-                        {
-                            Name = album.Name,
-                            Description = album.Description,
-                            PhotosCount = album.Photos.Count()
-                        };
+            //var model = from album in pdb.Albums
+            //            orderby album.Photos.Count() descending
+            //            select new AlbumsListViewModel
+            //            {
+            //                Name = album.Name,
+            //                Description = album.Description,
+            //                PhotosCount = album.Photos.Count()
+            //            };
+
+            // Extension Method Syntax
+            var model = pdb.Albums.
+                OrderByDescending(album => album.Photos.Count()).
+                Where(album => searchTerm == null || album.Name.StartsWith(searchTerm)).
+                Take(10).Select(album => new AlbumsListViewModel
+                {
+                   Name = album.Name,
+                   Description = album.Description,
+                   PhotosCount = album.Photos.Count()
+                });
+
             return View(model);
         }
 
