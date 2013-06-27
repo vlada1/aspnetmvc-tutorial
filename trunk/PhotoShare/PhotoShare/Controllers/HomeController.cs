@@ -9,16 +9,13 @@ namespace PhotoShare.Controllers
 {
     public class HomeController : Controller
     {
+
+        PhotoShareDb pdb = new PhotoShareDb();
+
         public ActionResult Index()
         {
-            var controller = RouteData.Values["controller"];
-            var action = RouteData.Values["action"];
-            var id = RouteData.Values["id"];
-
-            var message = String.Format("{0}::{1} {2}", controller, action, id);
-
-            ViewBag.Message = message;
-            return View();
+            var model = pdb.Albums.ToList();
+            return View(model);
         }
 
         public ActionResult About()
@@ -34,6 +31,13 @@ namespace PhotoShare.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (pdb != null)
+                pdb.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

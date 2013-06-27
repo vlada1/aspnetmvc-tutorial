@@ -96,3 +96,6 @@ C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoSha
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.csprojResolveAssemblyReference.cache
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.dll
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.pdb
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.Migrations.InitialCreate.resources
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.csproj.GenerateResource.Cache
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.Migrations.ChangeAlbumNameType.resources

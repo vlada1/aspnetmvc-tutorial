@@ -11,5 +11,6 @@ namespace PhotoShare.Models
         public string Description { get; set; }
         public string FilePath { get; set; }
         public int Rating { get; set; }
+        public int AlbumID { get; set; }
     }
 }
