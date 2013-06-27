@@ -19,6 +19,16 @@ namespace PhotoShare.Controllers
             return View(model);
         }
 
+        [ChildActionOnly]
+        public ActionResult LatestPhoto()
+        {
+            var model = from photo in _photos
+                        orderby photo.ID descending
+                        select photo;
+            //return Content(model.ElementAt(0).Description);
+            return PartialView("_Photo", model.First());
+        }
+
         //
         // GET: /Photos/Details/5
 

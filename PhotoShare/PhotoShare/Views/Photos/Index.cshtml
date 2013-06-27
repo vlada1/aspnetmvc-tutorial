@@ -15,14 +15,7 @@
 
     @foreach (var photo in Model)
     {
-        @:Photo
-        <div>
-            <img src="@Url.Content(photo.FilePath)" width="500" height="300" />
-            <br />
-            <p>@photo.Description</p>
-            <p>@photo.Rating / 10</p>
-            <p>@Html.ActionLink("Edit", "Edit", new { id = @photo.ID })</p>
-        </div>
+        @Html.Partial("_Photo", photo);
     }
 
 </div>
