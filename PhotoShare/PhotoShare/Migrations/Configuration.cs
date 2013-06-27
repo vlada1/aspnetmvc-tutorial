@@ -1,6 +1,8 @@
 namespace PhotoShare.Migrations
 {
+    using PhotoShare.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -9,23 +11,38 @@ namespace PhotoShare.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(PhotoShare.Models.PhotoShareDb context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.Albums.AddOrUpdate(
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+                album => album.Name,
+                new Album
+                {
+                    Name = "Album of Sceneries",
+                    Description = "An album containing photos of sceneries",
+                    Photos = new List<Photo>
+                    {
+                                    new Photo
+            {
+                Description = "Check out this shot of sunset!",
+                FilePath = "~/PhotoUploads/sunset.jpg",
+                Rating = 6
+            },
+
+            new Photo
+            {
+                Description = "These are some beautiful mountains",
+                FilePath = "~/PhotoUploads/mountains.jpg",
+                Rating = 9
+            },
+
+                    }
+                }
+
+               );
         }
     }
 }
