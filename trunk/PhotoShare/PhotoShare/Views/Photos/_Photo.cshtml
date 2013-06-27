@@ -1,0 +1,10 @@
+﻿@model PhotoShare.Models.Photo
+
+
+<div>
+    <img src="@Url.Content(@Model.FilePath)" width="500" height="300" />
+    <br />
+    <p>@Model.Description</p>
+    <p>@Model.Rating / 10</p>
+    <p>@Html.ActionLink("Edit", "Edit", new { id = @Model.ID })</p>
+</div>
