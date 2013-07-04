@@ -13,3 +13,5 @@
     @Html.Partial("_Photo", item);
 
 }
+
+@Html.ActionLink("New Photo", "Create", new { albumId = @Model.ID })

@@ -1,21 +1,17 @@
 ﻿@model PhotoShare.Models.Photo
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Create";
 }
 
-<h2>Edit</h2>
+<h2>Create</h2>
 
-@using (Html.BeginForm("Edit", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Create", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>Photo</legend>
-
-        <img src="@Url.Content(@Model.FilePath)" width="500" height="300" />
-
-        @Html.HiddenFor(model => model.ID)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Description)
@@ -26,9 +22,9 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.FilePath, "Change Photo")
+            @Html.LabelFor(model => model.FilePath, "Photo")
         </div>
-
+        
         <input name="photoFile" type="file" />
 
         <div class="editor-label">
@@ -39,10 +35,16 @@
             @Html.ValidationMessageFor(model => model.Rating)
         </div>
 
-        @Html.HiddenFor(model => model.AlbumID)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AlbumID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AlbumID)
+            @Html.ValidationMessageFor(model => model.AlbumID)
+        </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Create" />
         </p>
     </fieldset>
 }
