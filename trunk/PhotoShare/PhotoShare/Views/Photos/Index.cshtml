@@ -1,21 +1,15 @@
-﻿@model IEnumerable<PhotoShare.Models.Photo>
+﻿@model PhotoShare.Models.Album
 
 @{
     ViewBag.Title = "Index";
 }
 
 
-<div class="latest-photos-list">
-    <h2>Latest Photos (@Model.Count())</h2>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+<h1>@Model.Name</h1>
 
-    <br />
+@foreach (var item in @Model.Photos)
+{
 
-    @foreach (var photo in Model)
-    {
-        @Html.Partial("_Photo", photo);
-    }
+    @Html.Partial("_Photo", item);
 
-</div>
+}

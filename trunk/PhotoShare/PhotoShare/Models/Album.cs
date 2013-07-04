@@ -10,6 +10,6 @@ namespace PhotoShare.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
     }
 }
