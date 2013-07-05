@@ -29,6 +29,8 @@
             @Html.LabelFor(model => model.FilePath, "Change Photo")
         </div>
 
+        @Html.HiddenFor(model => model.FilePath)
+
         <input name="photoFile" type="file" />
 
         <div class="editor-label">
