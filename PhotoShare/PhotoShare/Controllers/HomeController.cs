@@ -12,6 +12,17 @@ namespace PhotoShare.Controllers
 
         PhotoShareDb pdb = new PhotoShareDb();
 
+        public ActionResult Autocomplete(string term)
+        {
+            var model = pdb.Albums.
+                Where(album => album.Name.StartsWith(term)).
+                Take(10).Select(a => new
+                {
+                    label = a.Name
+                });
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Index(string searchTerm = null)
         {
             // Comprehension Query Syntax
@@ -34,6 +45,11 @@ namespace PhotoShare.Controllers
                    Description = album.Description,
                    PhotosCount = album.Photos.Count()
                 });
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_Photos", model);
+            }
 
             return View(model);
         }

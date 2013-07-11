@@ -3,16 +3,22 @@
     ViewBag.Title = "Home Page";
 }
 
-<form method="get">
+@*<form method="get">
     <input type="text" name="searchTerm" />
     <input type="button" value="Search" />
-</form>
+</form>*@
 
-@foreach (var item in Model)
+@using (Ajax.BeginForm(new AjaxOptions
 {
-    <div>
-        <h2>@item.Name</h2>
-        <p>@item.Description</p>
-        <p>Photos: @item.PhotosCount</p>
-    </div>
+
+    HttpMethod = "get",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "albumsList"
+
+}))
+{
+    <input type="search" name="searchTerm" data-photoshare-autocomplete="@Url.Action("Autocomplete")"/>
+    <input type="submit" value="Search by Name" />
 }
+
+@Html.Partial("_Photos", Model)
