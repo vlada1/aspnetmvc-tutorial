@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PhotoShare.Models.AlbumsListViewModel>
+
+<div id="albumsList">
+    @foreach (var item in Model)
+    {
+        <div>
+            <h2>@item.Name</h2>
+            <p>@item.Description</p>
+            <p>Photos: @item.PhotosCount</p>
+        </div>
+    }
+</div>

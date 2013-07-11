@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PhotoShare.Models
 {
-    public class Photo : IValidatableObject
+    public class Photo
     {
         public int ID { get; set; }
 
@@ -21,13 +21,5 @@ namespace PhotoShare.Models
         public int Rating { get; set; }
         public int AlbumID { get; set; }
 
-        // Custom Validation Method 2:
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        {
-            if (Rating <= 2 && Description.ToLower().Equals("this sucks"))
-            {
-                yield return new ValidationResult("Alright sonny, that's enough.");
-            }
-        }
     }
 }
