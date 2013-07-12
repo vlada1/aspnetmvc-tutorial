@@ -99,3 +99,7 @@ C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoSha
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.Migrations.InitialCreate.resources
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.csproj.GenerateResource.Cache
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\obj\Debug\PhotoShare.Migrations.ChangeAlbumNameType.resources
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\bin\PagedList.dll
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\bin\PagedList.Mvc.dll
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\bin\PagedList.xml
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare\bin\PagedList.Mvc.xml
