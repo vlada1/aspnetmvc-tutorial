@@ -1,6 +1,12 @@
-﻿@model IEnumerable<PhotoShare.Models.AlbumsListViewModel>
+﻿@model IPagedList<AlbumsListViewModel>
 
 <div id="albumsList">
+
+    <div class="pagedList" data-photoshare-target="#albumsList">
+        @Html.PagedListPager(Model,page=>Url.Action("Index",new {page}),
+        PagedListRenderOptions.MinimalWithItemCountText)
+    </div>
+
     @foreach (var item in Model)
     {
         <div>

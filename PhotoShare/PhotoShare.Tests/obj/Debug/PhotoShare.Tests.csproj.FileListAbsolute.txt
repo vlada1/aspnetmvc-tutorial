@@ -94,3 +94,5 @@ C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoSha
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare.Tests\obj\Debug\PhotoShare.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare.Tests\obj\Debug\PhotoShare.Tests.dll
 C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare.Tests\obj\Debug\PhotoShare.Tests.pdb
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare.Tests\bin\Debug\PagedList.dll
+C:\Users\Nirav\Documents\Visual Studio 2012\Projects\aspnetmvc-tutorial\PhotoShare\PhotoShare.Tests\bin\Debug\PagedList.xml
