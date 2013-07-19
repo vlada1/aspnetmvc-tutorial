@@ -10,5 +10,6 @@ namespace PhotoShare.Models
     {
         public DbSet<Album> Albums { get; set; }
         public DbSet<Photo> Photos { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
     }
 }
