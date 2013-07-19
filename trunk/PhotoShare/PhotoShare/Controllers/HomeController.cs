@@ -8,6 +8,7 @@ using PagedList;
 
 namespace PhotoShare.Controllers
 {
+   
     public class HomeController : Controller
     {
 
@@ -55,6 +56,7 @@ namespace PhotoShare.Controllers
             return View(model);
         }
 
+        //[Authorize]
         public ActionResult About()
         {
             var model = new AboutModel();
