@@ -26,7 +26,7 @@ namespace PhotoShare
             //    appId: "",
             //    appSecret: "");
 
-            //OAuthWebSecurity.RegisterGoogleClient();
+            OAuthWebSecurity.RegisterGoogleClient();
         }
     }
 }

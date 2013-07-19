@@ -6,6 +6,8 @@ namespace PhotoShare.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Web.Security;
+    using WebMatrix.WebData;
 
     internal sealed class Configuration : DbMigrationsConfiguration<PhotoShare.Models.PhotoShareDb>
     {
@@ -57,6 +59,22 @@ namespace PhotoShare.Migrations
                 }
 
                );
+
+            SeedMemberShip();
+        }
+
+        private void SeedMemberShip()
+        {
+            WebSecurity.InitializeDatabaseConnection("PhotoShareSQLServerDb", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            var roles = (SimpleRoleProvider)Roles.Provider;
+            if (!roles.RoleExists("admin"))
+            {
+                roles.CreateRole("admin");
+            }
+            if (!roles.RoleExists("reguser"))
+            {
+                roles.CreateRole("reguser");
+            }
         }
     }
 }
